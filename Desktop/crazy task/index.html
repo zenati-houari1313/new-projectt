@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+
+<body>
+    
+    <div class="main-container">
+        <div class="header">
+        <img src="imgs/mainlogo.png" alt="">
+    <div class="nav-bar">
+        <a href="">About us</a>
+        <a href="">Order Parts</a>
+        <a href="">Register IP</a>
+        <a href="">More</a>
+
+        <div class="spacer-nav-bar"></div>
+
+        <a class="tenders" href="">Tenders</a> 
+
+    </div>
+    
+   <div class="account">
+    <button class="blue-button">Sign up</button>
+    <img  class="user-img" src="imgs/user-login.png" alt="test">
+   </div>
+        </div>
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <div class="computer-img">
+                    <div class="back"></div>
+                    <div class="background">
+                        
+                        <div class="gray-box"></div>
+                        <img class="background-image" src="imgs/computerimg.png" alt="dd">
+                    </div>
+                    <div class="bigtxt">
+                        <div><span>One Plateform For</span></div>
+                        <br>
+                  
+                        <div class="span1"><span >All Aour Accelerated</span></div>
+                        <br>
+                        
+                        <div class="span2" >
+                            <span >Manufacturing Needs.</span>
+                            <br>
+                            <br>
+                            
+                        <div class="img-p">
+                            <div>
+                                <span class="hubforward">Hubforward</span>
+                                <span class="paragraph">is a multi-industry manufacturing </span>
+                            </div>
+                        
+                            <span class="paragraph">plateform that is designed to maximize efficiency,</span>
+                           
+                            <span class="paragraph">transparency,and reliability </span>
+                            <br>
+                            </div>
+                        <div class="computer-img-btns">
+                                <button class="white-button">Partner Up</button>
+                                <button class="blue-button">Get a Quote</button>
+                        </div>        
+                        </div>
+                        <br>
+                    </div>
+                   
+                   
+                    </div>
+            </div>
+              <div class="slide">
+                <div class="computer-img">
+                    <div class="back"></div>
+                    <div class="background">
+                        
+                        <div class="gray-box"></div>
+                        <img class="background-image" src="imgs/computerimg.png" alt="dd">
+                    </div>
+                    <div class="bigtxt">
+                        <div><span>One Plateform For</span></div>
+                        <br>
+                  
+                        <div class="span1"><span >All Aour Accelerated</span></div>
+                        <br>
+                        
+                        <div class="span2" >
+                            <span >Manufacturing Needs.</span>
+                            <br>
+                            <br>
+                            
+                        <div class="img-p">
+                            <div>
+                                <span class="hubforward">Hubforward</span>
+                                <span class="paragraph">is a multi-industry manufacturing </span>
+                            </div>
+                        
+                            <span class="paragraph">plateform that is designed to maximize efficiency,</span>
+                           
+                            <span class="paragraph">transparency,and reliability </span>
+                            <br>
+                            </div>
+                        <div class="computer-img-btns">
+                                <button class="white-button">Partner Up</button>
+                                <button class="blue-button">Get a Quote</button>
+                        </div>        
+                        </div>
+                        <br>
+                    </div>
+                   
+                   
+                    </div>
+              </div>
+              <div class="slide">
+                <div class="computer-img">
+                    <div class="back"></div>
+                    <div class="background">
+                        
+                        <div class="gray-box"></div>
+                        <img class="background-image" src="imgs/computerimg.png" alt="dd">
+                    </div>
+                    <div class="bigtxt">
+                        <div><span>One Plateform For</span></div>
+                        <br>
+                  
+                        <div class="span1"><span >All Aour Accelerated</span></div>
+                        <br>
+                        
+                        <div class="span2" >
+                            <span >Manufacturing Needs.</span>
+                            <br>
+                            <br>
+                            
+                        <div class="img-p">
+                            <div>
+                                <span class="hubforward">Hubforward</span>
+                                <span class="paragraph">is a multi-industry manufacturing </span>
+                            </div>
+                        
+                            <span class="paragraph">plateform that is designed to maximize efficiency,</span>
+                           
+                            <span class="paragraph">transparency,and reliability </span>
+                            <br>
+                            </div>
+                        <div class="computer-img-btns">
+                                <button class="white-button">Partner Up</button>
+                                <button class="blue-button">Get a Quote</button>
+                        </div>        
+                        </div>
+                        <br>
+                    </div>
+                   
+                   
+                    </div>
+              </div>
+             
+            </div>
+            <div class="slider-dots">
+                <span class="slider-dot active" onclick="goToSlide(0)"></span>
+                <span class="slider-dot" onclick="goToSlide(1)"></span>
+                <span class="slider-dot" onclick="goToSlide(2)"></span>
+                <!-- Add more dots for each slide -->
+              </div>
+            <button class="slider-button slider-button-left" onclick="moveSlider(-1)"><</button>
+            <button class="slider-button slider-button-right" onclick="moveSlider(1)">></button>
+          </div>
+        
+          <script>
+            const slider = document.querySelector('.slider');
+            const dots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+        
+            function moveSlider(direction) {
+              currentSlide += direction;
+              if (currentSlide < 0) {
+                currentSlide = 0;
+              } else if (currentSlide > slider.children.length - 1) {
+                currentSlide = slider.children.length - 1;
+              }
+              const offset = currentSlide * 100; // Slide width is 100%
+              slider.style.transform = `translateX(-${offset}%)`;
+              updateDots();
+            }
+        
+            function goToSlide(slideIndex) {
+              currentSlide = slideIndex;
+              const offset = currentSlide * 100; // Slide width is 100%
+              slider.style.transform = `translateX(-${offset}%)`;
+              updateDots();
+            }
+        
+            function updateDots() {
+              dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                  dot.classList.add('active');
+                } else {
+                  dot.classList.remove('active');
+                }
+              });
+            }
+          </script>
+      
+        
+       <div class="img-nav-bar">
+        <div class="badge">
+            <img src="imgs/graybar4.png" alt="">
+            <span>Shorter Lead time</span>
+        </div>
+        <div class="badge">
+            <img src="imgs/graybar1.png" alt="">
+            <span>Better Quqlity</span>
+        </div>
+        <div class="badge">
+            <img src="imgs/graybar3.png" alt="">
+            <span>Effective cost</span>
+        </div>
+        <div class="badge">
+            <img src="imgs/graybar2.png" alt="">
+            <span>Full transparency</span>
+        </div>
+
+       </div>     
+       <div class="services">
+        <div class="tittle">
+            <div class="blue-line"></div>
+            <span class="firstwrd">Services</span>
+            <span class="secondwrd">We provide</span>
+        </div>
+        <br>
+        <div class="services-details">
+                 <div class="service">
+                    <img src="imgs/service1.png" alt="">
+                    <span>Parts Manufactoring</span>
+                
+                    </div>
+                 <div class="service">
+                    <img src="imgs/service2.png" alt="">
+                    <span>Complex Systems Manufactoring</span>
+                
+                    </div>
+                 <div class="service">
+                    <img src="imgs/service3.png" alt="">
+                    <span>Intelectual Property service</span>
+                
+                    </div>
+                 <div class="service">
+                    <img src="imgs/service4.png" alt="">
+                    <span>Talk to an expert</span>
+                
+                    </div>
+               
+                    
+                
+            </div>
+           
+           
+        </div>
+        
+       </div>
+       <div class="features">
+        <div class="tittle">
+            <div class="blue-line"></div>
+            <span class="firstwrd">Features</span>
+            <span class="secondwrd">We Offer</span>
+        </div>
+        <br>
+        <div class="features-details">
+            <div class="feature">
+                    <span class="feat-tittle">Expert Engeneering Consulting</span>
+                <div class="feat-txt">
+                    
+                    <span class="feat-paragraph">
+                        Our team of expert engeneers provides expert consultaion services to ensure that your project is executed    successfully  ,efficiently and cost-effectively
+                    </span>
+                    <img class="feat-img" src="imgs/feature1.png" alt="">
+                </div>
+                <br>
+                
+                
+                
+            </div>
+            <div class="feature">
+                <span class="feat-tittle">One For All Plateform</span>
+            <div class="feat-txt">
+                
+                <span class="feat-paragraph">
+                    Our plateforme allows you to follow up on all aspects of your project, ensuring that everything is on trackand within budget, we work closely whith you to make surethat your project runs smoothly from start to finish    </span>
+                <img class="feat-img" src="imgs/feature2.png" alt="">
+            </div>
+            <br>
+            
+            
+            
+            </div>
+             <div class="feature">
+            <span class="feat-tittle">Partnership Opportunity</span>
+        <div class="feat-txt">
+            
+            <span class="feat-paragraph">
+                We offer partnership opportunities to mnufacturers
+                and suppliers, providing the tools to you to increase
+                your visibility ond grow your business
+                
+               
+            </span>
+            <img class="feat-img" src="imgs/feature3.png" alt="">
+        </div>
+        <br>
+        
+        
+        
+            </div>
+            
+        </div>
+        <div class="btn-div"> 
+            <button class="blue-button">schedule a call ↗</button>
+        </div>
+       </div>
+       <div class="industries">
+        <div class="tittle">
+            <div class="blue-line"></div>
+            <span class="firstwrd">Indestries</span>
+            <span class="secondwrd">We serve</span>
+        </div>
+        <br>
+        <div class="industries-details">
+
+            <div class="industries-top">
+               <div class="lft1">
+                <div class="left">
+                   
+                    <span class="ind-name">Oil & Gas</span> 
+                    <img class="ind-img" src="imgs/left.png" alt="">
+                </div>
+               </div>
+                <div class="mid">
+                    
+                    <span class="ind-name">Power & Water</span>
+                    <img class="ind-img" src="imgs/mid.png" alt="">
+                </div>
+              <div class="rght1">
+                <div class="right">
+                    <span class="ind-name">Utilities & infrastructure</span>
+                    <img class="ind-img" src="imgs/right.png" alt="">
+                </div>
+              </div>
+
+            </div>
+            <div class="industries-bot">
+                <div class="lft2">
+                 <div class="left2">
+                    
+                     <span class="ind-name">Industrial</span> 
+                     <img class="ind-img" src="imgs/left2.png" alt="">
+                 </div>
+                </div>
+                 <div class="mid">
+                     
+                     <span class="ind-name">Transportation</span>
+                     <img class="ind-img" src="imgs/mid2.png" alt="">
+                 </div>
+               <div class="rght2">
+                 <div class="right2">
+                     <span class="ind-name">Building & Construction</span>
+                     <img class="ind-img" src="imgs/right2.png" alt="">
+                 </div>
+               </div>
+ 
+             </div>
+
+
+        </div>
+       </div>
+       <div class="sectors">
+        <div class="tittle">
+            <div class="blue-line"></div>
+            <span class="firstwrd">Sectors</span>
+            <span class="secondwrd">We Cater</span>
+        </div>
+        <br>
+        <div class="sectors-details">
+            <span class="paragraph"><span class="hubforward">Hubforward</span>  serves a wide range of sectors from hospitality, aviation, oil/gas, medical communication, roads, and buílding construction, to waterworks, power generation,sewerage, manufacturing facilities, and other business spanning more than 25 industries
+            across the globe
+
+           
+
+    </span>
+        </div>
+        <div class="btn-div"> 
+            <button class="blue-button">Get Started ↗</button>
+        </div>
+       </div>
+    </div>
+
+
+
+</body>
+<footer>
+    <div class="content">
+        <div class="category">
+            <span class="category">Hubforward</span>
+            <a href="">About Us</a>
+            <a href="">How it works</a>
+            <a href="">Solutions</a>
+            <a href="">Blog page</a>
+            <a href="">News</a>
+            <a href="">Contact Us</a>
+        </div>
+        
+        <div class="category">
+            <span >Services</span>
+            <a href="">Part Manufactoring</a>
+            <a href="">Complex Systems Manufactoring</a>
+            <a href="">Registred Parent</a>
+            <a href="">Intelectual Property</a>
+            <a href="">Engeneering Consulting</a>
+            
+        </div>
+
+        <div class="category">
+            <span >Find Projects</span>
+            <a href="">oil & gas</a>
+            <a href="">Power & water </a>
+            <a href="">Utilities & infrastructure</a>
+            <a href="">Industrial</a>
+            <a href="">Transportation</a>
+            <a href="">Building Construction</a>
+            <a href="">Medical</a>
+            
+        </div>
+        <div class="category">
+            <div class="location">
+                <img src="imgs/location.png" alt="">
+                <a href="">14th Floor ,Al Katim tower,ADGM,Al Mariah islan ,Abu Dhabi</a>
+            </div>
+            <div class="location">
+                <img src="imgs/location.png" alt="">
+                <a href="">14th Floor ,Al Katim tower,ADGM,Al Mariah islan ,Abu Dhabi</a>
+            </div>
+            <div class="social">
+                <img src="imgs/likedin-icon.png" alt="">
+                <img src="imgs/icon__twitter_.png" alt="">
+                <img src="imgs/icon__facebook_.png" alt="">
+            </div>
+        </div>
+    </div>
+    <span class="copyright">Copyright 2023 All Rights Reserved</span>
+</footer>
+</html>

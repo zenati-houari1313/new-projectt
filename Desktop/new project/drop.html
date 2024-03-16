@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Transition Example</title>
+  <link rel="stylesheet" href="drop.css">
+</head>
+<body>
+
+<div id="main-page" class="page">
+  <div class="content">
+    <h1>Welcome to shoroq partners</h1>
+    <p>The leading tech investor in Middle East, North Africa and Pakistan</p>
+    <div class="press">
+        <button id="main-btn">get funded</button>
+        <span>press enter ↵</span>
+    </div>
+    
+  </div>
+</div>
+
+<div id="second-page" class="page hidden">
+  <div class="content2">
+    <p>Thank you for expressing your keen interest in sharing your journey with us.</p>
+
+    <p>Shorooq Partners’ Bedaya Fund is the leading Seed stage investor in the MENAP region. The Bedaya Fund Series invests primarily in Pre-Seed to Series A startups across the MENAP region with a particular focus on Fintech, Platform, Software and Blockchain enabled technologies. We pride ourselves as Founders’ Partners and commit to create tangible and real value as your partner if we were to join your journey together.</p>
+        
+    <p>At Shorooq Partners, we hold ourselves accountable to the highest standards and always ensure that we get back to Founders in a timely manner. A member of the team will review your application and revert back as quickly as possible.</p>
+        
+    <p> Once again, thank you for your interest in Shorooq Partners and joining our ecosystem!</p>
+    <div class="press">
+        <button id="second-btn">Love It, Lets Start!</button>  
+         <span>press enter ↵</span>
+    </div>
+   
+  </div>
+</div>
+
+<div id="third-page" class="page hidden">
+  <div class="content3">
+      <span>
+       1-> Are you applying for your startup or are you an advisor applying on behalf of a startup?
+      </span>
+      <button id="third-btn1">im a startup founder</button>
+      <button id ="third-btn2">i am an advisor</button>
+      <button id="third-btn3"> ok ✓</button>
+  </div>
+</div>
+<div id="forth-page" class="page hidden">
+<div class="content4">
+ <span>
+   empty page
+</span>
+  </div>
+</div>
+  <div class="scroll-buttons">
+    <button class="scroll-btn" onclick="nextpage()"><img src="Group 8.png" alt=""></button>
+    <button class="scroll-btn" onclick="prevpage()"><img src="Group 9.png" alt=""></button>
+    
+  </div>
+<script src="drop.js"></script>
+</body>
+</html>

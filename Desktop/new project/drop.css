@@ -1,0 +1,190 @@
+
+body {
+
+  background-image: url('téléchargement.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+
+.page {
+  background-image: url('téléchargement.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #E0B786;
+  padding: 20px;
+  transition: transform 0.5s ease;
+  height: 100vh;
+}
+#second-page,#third-page,#forth-page
+{
+  background-image: url('téléchargement2.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+.hidden {
+  transform: translateY(100%);
+}
+#main-btn:hover {
+  background-color: hsl(42, 67%, 49%);
+}
+#second-btn:hover {
+  background-color: hsl(42, 67%, 49%); 
+}
+#third-btn3:hover {
+  background-color: hsl(42, 67%, 49%); 
+}
+
+#main-btn {
+  width: 160px;
+  height: 58px;
+  border-radius: 5px;
+  color: rgb(246, 244, 242);
+  background-color: rgba(249, 122, 11, 0.774);
+  border: 2px solid rgba(249, 122, 11, 0.774);
+  font-size: 23px;
+  padding: 10px 10px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+#second-btn {
+  width: 180px;
+  height: 45px;
+  border-radius: 5px;
+  color: rgb(246, 244, 242);
+  background-color: rgba(249, 122, 11, 0.774);
+  border: 2px solid rgba(249, 122, 11, 0.774);
+  font-size: 15px;
+  padding: 10px 10px;
+  font-weight: bold;
+  
+}
+#third-btn3
+{ height: 45px;
+  width: 120px;
+  border-radius: 5px;
+  color: rgb(246, 244, 242);
+  background-color: rgba(249, 122, 11, 0.774);
+  border: 2px solid rgba(249, 122, 11, 0.774);
+  font-size: 18px;
+  padding: 10px 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#third-btn1 ,#third-btn2
+{ height: 50px;
+  width: 250px;
+  border-radius: 5px;
+  color: rgb(246, 244, 242);
+  background-color: rgb(76, 76, 67);
+  border: 1px solid #fbfbf9;
+  font-size: 20px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.content {
+  text-align: center;
+  margin-right: 10px;
+}
+
+.content2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
+
+.content h1 {
+  font-size: 40px;
+  color: hwb(0 95% 2%);
+  font-weight: lighter;
+ 
+}
+
+.content p {
+  font-size: 23px;
+  color: hsl(0, 2%, 76%);
+  text-shadow: 2px 2px 4px rgba(137, 120, 120, 0.5);
+}
+
+.content2 p {
+  font-size: 25px;
+  color: hsl(0, 0%, 96%);
+}
+.content3
+{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin-right: 100px;
+  gap: 25px;
+}
+.content3 span
+{
+  font-size: 25px;
+  color: whitesmoke;
+  width:595px;
+  
+}
+
+.press {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.press span {
+  font-size: 15px;
+  color: white;
+}
+
+.scroll-buttons {
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.scroll-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.scroll-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}

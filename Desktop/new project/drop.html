@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Transition Example</title>
@@ -40,24 +43,42 @@
 <div id="third-page" class="page hidden">
   <div class="content3">
       <span>
-       1-> Are you applying for your startup or are you an advisor applying on behalf of a startup?
+       1 → Are you applying for your startup or are you an advisor applying on behalf of a startup?
       </span>
-      <button id="third-btn1">im a startup founder</button>
-      <button id ="third-btn2">i am an advisor</button>
+      <button id ="third-btn1">i am an advisor <div id="checkmark1" class="hidden2">✓</div> </button>
+      <button id ="third-btn2">i am an advisor <div id="checkmark2" class="hidden2">✓</div> </button>
       <button id="third-btn3"> ok ✓</button>
   </div>
 </div>
 <div id="forth-page" class="page hidden">
-<div class="content4">
- <span>
-   empty page
-</span>
+<div class="content4"> 
+    <span>
+     1 → Let us get more info about the startup
+    </span>
+    <button id="forth-btn"> continue</button>
+
   </div>
 </div>
-  <div class="scroll-buttons">
-    <button class="scroll-btn" onclick="nextpage()"><img src="Group 8.png" alt=""></button>
-    <button class="scroll-btn" onclick="prevpage()"><img src="Group 9.png" alt=""></button>
+<div id="fifth-page" class="page hidden">
+  <div id="alert" ><p>2 →Let us get more info about the startup</p></div>
+  <div class="content5"> 
+    <span>a.
+      Company NameThis question is required.*</span>
+      <form id="myForm">
+        <input type="text" id="answer" class="input-field" placeholder="Please type your answer...">
+
+    </form>
+    <div id="errorMessage" class="error-message" style="display: none;"><img src="fluent_warning-20-filled.png" alt="" style="width: 20px; height: auto"> Please fill this in.</div>
     
+  <button id="fifth-btn" value="submit" > ok ✓</button>
+    </div>
+  </div>
+  <div id="sixth-page" class="page hidden">
+
+    </div>
+  <div class="scroll-buttons">
+    <button class="scroll-btn" onclick="nextpage()"><img src="Group 8.png" alt=""></button> 
+    <button class="scroll-btn" onclick="prevpage()"><img src="Group 9.png" alt=""></button>
   </div>
 <script src="drop.js"></script>
 </body>

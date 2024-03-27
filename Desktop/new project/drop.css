@@ -2,7 +2,7 @@
 body {
 
   background-image: url('téléchargement.png');
-  background-size: cover; 
+  background-size: auto; 
   background-position: center; 
   background-repeat: no-repeat;
     font-family: "Poppins", sans-serif;
@@ -15,7 +15,7 @@ body {
 
 .page {
   background-image: url('téléchargement.png');
-  background-size: cover; 
+  background-size: contain; 
   background-position: center; 
   background-repeat: no-repeat; 
   display: flex;
@@ -25,12 +25,12 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #E0B786;
+  background-color: #141414;
   padding: 20px;
   transition: transform 0.5s ease;
   height: 100vh;
 }
-#second-page,#third-page,#forth-page,#fifth-page,#sixth-page
+#second-page,#third-page,#forth-page,#fifth-page,#sixth-page,#seventh-page
 {
   background-image: url('téléchargement2.png');
   background-size: cover; 
@@ -40,7 +40,7 @@ body {
 .hidden {
   transform: translateY(100%);
 }
-#main-btn:hover {
+#main-btn:hover,#btn7:hover {
   background-color: hsl(42, 67%, 49%);
 }
 #second-btn:hover {
@@ -54,13 +54,10 @@ body {
 }
 #fifth-btn:hover{
   background-color: hsl(42, 67%, 49%); 
+}#sixth-btn:hover{
+  background-color: hsl(42, 67%, 49%); 
 }
-#third-btn1:hover{
-  background-color: rgb(47, 47, 40);
-}
-#third-btn2:hover{
-  background-color: rgb(47, 47, 40);
-}
+
 
 
 
@@ -77,30 +74,26 @@ body {
   margin-left: 50px;
 }
 #second-btn {
-  width: 180px;
-  height: 45px;
-  border-radius: 5px;
+
+  border-radius: 3px;
   color: rgb(246, 244, 242);
   background-color:#FA6B05;
   border: 2px solid#FA6B05;
-  font-size: 15px;
-  padding: 10px 10px;
+  font-size: 19px;
+  padding: 5px 10px;
   font-weight: bold;
   
 }
 #third-btn3
-{ height: 45px;
-  width: 120px;
+{ 
+  padding: 5px 15px;
   border-radius: 5px;
   color: rgb(246, 244, 242);
   background-color: #FA6B05;
   border: 2px solid#FA6B05;
-  font-size: 18px;
-  padding: 10px 10px;
+  font-size: 22px;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 #forth-btn
 {height: 45px;
@@ -117,36 +110,39 @@ body {
   justify-content: center;
 
 }
+
 #third-btn1 ,#third-btn2
-{ height: 50px;
-  width: 270px;
+{ 
   border-radius: 5px;
   color: rgb(246, 244, 242);
-  background-color: rgb(76, 76, 67);
+  background-color: rgb(47, 47, 40);
   border: 1px solid #fbfbf9;
   font-size: 20px;
-  padding: 10px 10px;
+  padding: 10px 5px;
+  width: 300px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
 }
-#fifth-btn
-{ height: 45px;
-  width: 100px;
+#letter{
+  padding: 2px 5px;
+  margin-right: 5px;
+  font-size: 17px;
+  border: 1px solid hwb(0 100% 0%);
+  
+}
+#fifth-btn,#sixth-btn,#btn7
+{ 
+  padding: 5px 15px;
   border-radius: 5px;
   color: rgb(246, 244, 242);
   background-color: #FA6B05;
   border: 2px solid#FA6B05;
-  font-size: 18px;
-  padding: 10px 10px;
+  font-size: 23px;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 
 }
-
-
 
 
 .content {
@@ -155,8 +151,9 @@ body {
 }
 
 .content2 {
+  margin-top: 50px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: sen;
   align-items: center;
   flex-direction: column;
   width: 70%;
@@ -176,10 +173,15 @@ body {
 }
 
 .content2 p {
-  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  font-size: 23px;
+  width: 730px;
   color: hsl(0, 0%, 96%);
+  margin-top: 0;
 }
-.content3,.content4,.content5
+.content3,.content4,.content5,.content6,.content7
 {
   display: flex;
   justify-content: start;
@@ -188,7 +190,12 @@ body {
   margin-right: 100px;
   gap: 25px;
 }
-.content3 span ,.content4 span,.content5 span
+.content3,.content4,.content5,.content6,.content7
+{
+
+  gap: 12px;
+}
+.content3 span ,.content4 span,.content5 span,.content6 span,.content7 span
 {
   font-size: 25px;
   color: whitesmoke;
@@ -198,10 +205,13 @@ body {
 
 .press {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: row;
   gap: 5px;
+
+  max-width: 700px;
+  width: 100%;
 }
 
 .press span {
@@ -210,39 +220,47 @@ body {
 }
 
 .scroll-buttons {
+  gap: 1px;
+  border-radius: 5px;
+  background-color: white;
   display: flex;
-  gap: 20px;
   position: fixed;
   bottom: 20px;
   right: 20px;
 }
 
+
 .scroll-btn {
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
+  padding: 2px 12px;
   border: none;
-  background-color: transparent;
-  color: #fff;
+  border-radius: 5px;
+  background-color: #FA6B05;
+  color: white;
   cursor: pointer;
-  outline: none;
+
 }
-.scroll-btn {
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  border: none;
-  background-color: transparent;
-  color: #fff;
-  cursor: pointer;
-  outline: none;
+.scrll{
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  
+}
+.scrlr{
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  
+}
+.rotated {
+  padding: 0 0px;
+  font-size: 20px;
+  font-weight: bold;
+  transform: rotate(90deg);
 }
 .hidden2
 {
   display: none;
 }
-#alert
-{background-color: rgba(30, 23, 16, 0.886);
+#alert,#alert2,#alert3,#alert4
+{background-color: rgba(117, 103, 82, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,10 +271,12 @@ body {
   left:0;
   width:100%;
   position: fixed;
-  animation: message 1s ease-in forwards;
   opacity: 0;
  
 }
+
+
+
 
 
 @keyframes message 
@@ -291,7 +311,7 @@ form{
   display: flex;
   flex-direction: column;
 }
-#errorMessage {
+.error-message {
   display: none;
   background-color: #fcdadf;
   color: hsl(0, 96%, 35%);
@@ -304,4 +324,93 @@ form{
   justify-content: center;
   align-items: center;
 }
+#error-message4
+{
+  display: none;
+}
 
+@media (max-width: 400px) {
+  body {
+
+    background-image: url('téléchargement.png');
+    background-size: auto; 
+    background-position: co; 
+    background-repeat: no-repeat;
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+   
+    
+  }
+  .content h1 {
+    font-size:30px;
+  }
+  .content{
+    margin-right: 50px;
+    margin-top: 39px;
+  }
+  .content p {
+    font-size: 18px;
+  }
+  #main-btn {
+    width: 350px;
+    height: 50px;
+    margin-left: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .scroll-buttons {
+
+    bottom: 80px;
+    right: 20px;
+  }
+  .press span
+  {
+    display: none;
+  }
+  .content2 {
+    margin-top: 150px;
+    width: 100%;
+    height: 80vh; /* Adjust height to take up more of the page */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+  }
+  
+  .content2 p {
+    font-size: 15px;
+    width:90%;
+    text-align: start; 
+    line-height: 1.5; 
+    margin: 0; 
+    margin-bottom: 5px;
+    padding: 0;
+  }
+  .content3 span ,.content4 span,.content5 span,.content6 span
+{
+  font-size: 20px;
+  width:100%;
+  
+}
+
+#alert,#alert2,#alert3,#alert4
+{
+  font-size: 20px;
+  height:60px;
+
+ 
+}
+.content6{
+  width:100%;
+}
+
+.input-field {
+
+  width: 100%;
+  padding: 5px;
+
+}
+}

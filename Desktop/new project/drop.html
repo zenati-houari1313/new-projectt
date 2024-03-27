@@ -1,85 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Transition Example</title>
-  <link rel="stylesheet" href="drop.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Page Transition Example</title>
+        <link rel="stylesheet" href="drop.css" />
+    </head>
+    <body>
+        <div id="main-page" class="page">
+            <div class="content">
+                <h1>Welcome to shorooq partners</h1>
+                <p>
+                    The leading tech investor in Middle East, North Africa and
+                    Pakistan
+                </p>
+                <div class="press">
+                    <button id="main-btn">Get funded</button>
+                    <span>press enter ↵</span>
+                </div>
+            </div>
+        </div>
 
-<div id="main-page" class="page">
-  <div class="content">
-    <h1>Welcome to shoroq partners</h1>
-    <p>The leading tech investor in Middle East, North Africa and Pakistan</p>
-    <div class="press">
-        <button id="main-btn">get funded</button>
-        <span>press enter ↵</span>
-    </div>
-    
-  </div>
-</div>
+        <div id="second-page" class="page hidden">
+            <div class="content2">
+                <p>
+                    Thank you for expressing your keen interest in sharing your
+                    journey with us.
+                </p>
 
-<div id="second-page" class="page hidden">
-  <div class="content2">
-    <p>Thank you for expressing your keen interest in sharing your journey with us.</p>
+                <p>
+                    Shorooq Partners’ Bedaya Fund is the leading Seed stage
+                    investor in the MENAP region. The Bedaya Fund Series invests
+                    primarily in Pre-Seed to Series A startups across the MENAP
+                    region with a particular focus on Fintech, Platform,
+                    Software and Blockchain enabled technologies. We pride
+                    ourselves as Founders’ Partners and commit to create
+                    tangible and real value as your partner if we were to join
+                    your journey together.
+                </p>
 
-    <p>Shorooq Partners’ Bedaya Fund is the leading Seed stage investor in the MENAP region. The Bedaya Fund Series invests primarily in Pre-Seed to Series A startups across the MENAP region with a particular focus on Fintech, Platform, Software and Blockchain enabled technologies. We pride ourselves as Founders’ Partners and commit to create tangible and real value as your partner if we were to join your journey together.</p>
-        
-    <p>At Shorooq Partners, we hold ourselves accountable to the highest standards and always ensure that we get back to Founders in a timely manner. A member of the team will review your application and revert back as quickly as possible.</p>
-        
-    <p> Once again, thank you for your interest in Shorooq Partners and joining our ecosystem!</p>
-    <div class="press">
-        <button id="second-btn">Love It, Lets Start!</button>  
-         <span>press enter ↵</span>
-    </div>
-   
-  </div>
-</div>
+                <p>
+                    At Shorooq Partners, we hold ourselves accountable to the
+                    highest standards and always ensure that we get back to
+                    Founders in a timely manner. A member of the team will
+                    review your application and revert back as quickly as
+                    possible.
+                </p>
 
-<div id="third-page" class="page hidden">
-  <div class="content3">
-      <span>
-       1 → Are you applying for your startup or are you an advisor applying on behalf of a startup?
-      </span>
-      <button id ="third-btn1">i am an advisor <div id="checkmark1" class="hidden2">✓</div> </button>
-      <button id ="third-btn2">i am an advisor <div id="checkmark2" class="hidden2">✓</div> </button>
-      <button id="third-btn3"> ok ✓</button>
-  </div>
-</div>
-<div id="forth-page" class="page hidden">
-<div class="content4"> 
-    <span>
-     1 → Let us get more info about the startup
-    </span>
-    <button id="forth-btn"> continue</button>
+                <p>
+                    Once again, thank you for your interest in Shorooq Partners
+                    and joining our ecosystem!
+                </p>
+                <div class="press">
+                    <button id="second-btn">Love It, Lets Start!</button>
+                    <span>press enter ↵</span>
+                </div>
+            </div>
+        </div>
 
-  </div>
-</div>
-<div id="fifth-page" class="page hidden">
-  <div id="alert" ><p>2 →Let us get more info about the startup</p></div>
-  <div class="content5"> 
-    <span>a.
-      Company NameThis question is required.*</span>
-      <form id="myForm">
-        <input type="text" id="answer" class="input-field" placeholder="Please type your answer...">
-
-    </form>
-    <div id="errorMessage" class="error-message" style="display: none;"><img src="fluent_warning-20-filled.png" alt="" style="width: 20px; height: auto"> Please fill this in.</div>
-    
-  <button id="fifth-btn" value="submit" > ok ✓</button>
-    </div>
-  </div>
-  <div id="sixth-page" class="page hidden">
-
-    </div>
-  <div class="scroll-buttons">
-    <button class="scroll-btn" onclick="nextpage()"><img src="Group 8.png" alt=""></button> 
-    <button class="scroll-btn" onclick="prevpage()"><img src="Group 9.png" alt=""></button>
-  </div>
-<script src="drop.js"></script>
-</body>
+        <div id="third-page" class="page hidden">
+            <div class="content3">
+                <span>
+                    1 → Are you applying for your startup or are you an advisor
+                    applying on behalf of a startup?
+                </span>
+                <button id="third-btn1">
+                    <div id="letter">A</div>
+                    i am a startup founder
+                    <div id="checkmark1" class="hidden2">✓</div>
+                </button>
+                <button id="third-btn2">
+                    <div id="letter">B</div>
+                    i am an advisor
+                    <div id="checkmark2" class="hidden2">✓</div>
+                </button>
+                <button id="third-btn3">OK ✓</button>
+            </div>
+        </div>
+        <div id="forth-page" class="page hidden">
+            <div class="content4">
+                <span>
+                    2 → Great! Let us get to know you and your company better
+                </span>
+                <div class="press">
+                    <button id="forth-btn">continue</button>
+                    <span>press enter ↵</span>
+                </div>
+            </div>
+        </div>
+        <div id="fifth-page" class="page hidden">
+            <div id="alert">
+                <p>2 →Let us get more info about the startup</p>
+            </div>
+            <div class="content5">
+                <span>a. What's your first name*</span>
+                <form id="myForm">
+                    <input
+                        type="text"
+                        id="answer"
+                        class="input-field"
+                        placeholder="Please type your answer..."
+                    />
+                </form>
+                <div
+                    id="errorMessage"
+                    class="error-message"
+                    style="display: none"
+                >
+                    <img
+                        src="fluent_warning-20-filled.png"
+                        alt=""
+                        style="width: 20px; height: auto"
+                    />
+                    Please fill this in.
+                </div>
+                <div class="press">
+                    <button id="fifth-btn" value="submit">Ok ✓</button>
+                    <span>press enter ↵</span>
+                </div>
+            </div>
+        </div>
+        <div id="sixth-page" class="page hidden">
+            <div id="alert2">
+                <p>2 →Let us get more info about the startup</p>
+            </div>
+            <div class="content6">
+                <span>b. and your last name*</span>
+                <form id="myForm2">
+                    <input
+                        type="text"
+                        id="answer2"
+                        class="input-field"
+                        placeholder="type your answer here..."
+                    />
+                </form>
+                <div
+                    id="errorMessage2"
+                    class="error-message"
+                    style="display: none"
+                >
+                    <img
+                        src="fluent_warning-20-filled.png"
+                        alt=""
+                        style="width: 20px; height: auto"
+                    />
+                    Please fill this in.
+                </div>
+                <div class="press">
+                    <button id="sixth-btn" value="submit">Ok ✓</button>
+                    <span>press enter ↵</span>
+                </div>
+            </div>
+        </div>
+        <div id="seventh-page" class="page hidden">
+            <div id="alert4">
+                <p>2 →Let us get more info about the startup</p>
+            </div>
+            <div class="content7">
+                <span>c. please provide us your company name*</span>
+                <form id="myForm3">
+                    <input
+                        type="text"
+                        id="answer3"
+                        class="input-field"
+                        placeholder="type your answer here"
+                    />
+                </form>
+                <div
+                    id="errorMessage3"
+                    class="error-message"
+                    style="display: none"
+                >
+                    <img
+                        src="fluent_warning-20-filled.png"
+                        alt=""
+                        style="width: 20px; height: auto"
+                    />
+                    Please fill this in.
+                </div>
+                <div
+                id="error-message4"
+                style="display: none;"
+            >
+                <img
+                    src="fluent_warning-20-filled.png"
+                    alt=""
+                    style="width: 20px; height: auto"
+                />
+                naaaaaaaaaaaaaaaaaaaaaaah
+            </div>
+                <div class="press">
+                    <button id="btn7" value="submit">Ok ✓</button>
+                    <span>press enter ↵</span>
+                </div>
+            </div>
+        </div>
+        <div id="eigth-page" class="page hidden"></div>
+     
+     
+        <div class="scroll-buttons">
+            <button id="x" class="scroll-btn scrll" onclick="nextpage()">
+                <div class="rotated">></div>
+            </button>
+            <button class="scroll-btn scrlr" onclick="prevpage()">
+                <div class="rotated"><</div>
+            </button>
+        </div>
+        <script src="drop.js"></script>
+    </body>
 </html>

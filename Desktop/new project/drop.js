@@ -37,25 +37,22 @@ forthBtn.addEventListener("click", function () {
     document.getElementById("fifth-page").classList.remove("hidden");
 });
 fifthBtn.addEventListener("click", function () {
-    document.getElementById("alert2").style.animation =
-        "message 1s ease-in forwards";
+   
     if (validateInput()) {
         document.getElementById("sixth-page").classList.remove("hidden");
     }
 });
 sixthBtn.addEventListener("click", function () {
-    document.getElementById("alert3").style.animation =
-        "message 1s ease-in forwards";
+    
     if (validateInput2()) {
         document.getElementById("seventh-page").classList.remove("hidden");
     }
 });
 
 seventhBtn.addEventListener("click", function () {
-    document.getElementById("alert4").style.animation =
-        "message 1s ease-in forwards";
+   
     if (validateInput3()) {
-        document.getElementById("eigth-page").classList.remove("hidden");
+        document.getElementById("eighth-page").classList.remove("hidden");
     }
 });
 
@@ -79,7 +76,7 @@ function showNextPage(step) {
             break;
         case 5:
             document.getElementById("fifth-page").classList.remove("hidden");
-            Document.getElementById("alert").style.opacity = "1";
+            
             break;
         case 6:
             if (step === 6 && validateInput()) {
@@ -116,7 +113,7 @@ function showPrevPage(step) {
             break;
         case 5:
             document.getElementById("fifth-page").classList.remove("hidden");
-            Document.getElementById("alert").style.opacity = "1";
+            
             break;
         case 6:
             if (step === 6 && validateInput()) {
@@ -261,3 +258,54 @@ function validateInput3(event) {
 function isWebsite(input) {
     return input.includes(".com") || input.includes(".net") || input.includes(".org");
 }
+/////////////////////////////////////////////////////////////////////
+var countries = [
+    "United States", "United Kingdom", "Canada", "Australia", "Germany", "France", "India", "Japan", "China", "Brazil"
+    // Add more countries as needed
+  ];
+
+  var countryInput = document.getElementById('countryInput');
+  var countryList = document.getElementById('countryList');
+
+  // Function to display the country list
+  function displayCountryList() {
+    countryList.innerHTML = '';
+    countries.forEach(function(country) {
+      var option = document.createElement('div');
+      option.textContent = country;
+      option.classList.add('countryOption');
+      option.addEventListener('click', function() {
+        countryInput.value = country;
+        countryList.style.display = 'none';
+      });
+      countryList.appendChild(option);
+    });
+    countryList.style.display = 'block';
+  }
+
+  // Show country list when form is clicked
+  document.getElementById('form4').addEventListener('click', function(event) {
+    event.stopPropagation();
+    displayCountryList();
+  });
+
+  // Filter country list based on user input
+  countryInput.addEventListener('input', function() {
+    var input = this.value.trim().toLowerCase();
+    var options = countryList.getElementsByClassName('countryOption');
+    Array.from(options).forEach(function(option) {
+      var country = option.textContent.toLowerCase();
+      if (country.indexOf(input) !== -1) {
+        option.style.display = 'block';
+      } else {
+        option.style.display = 'none';
+      }
+    });
+  });
+
+  // Close country list when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('form')) {
+      countryList.style.display = 'none';
+    }
+  });
